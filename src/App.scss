@@ -24,6 +24,10 @@
   color: white;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
 .container{
   width: 90%;
   margin: 0 auto;
@@ -46,6 +50,7 @@
         text-decoration-line: none;
         font-weight: 600;
         font-size: 17px;
+        flex-wrap: nowrap;
       }
         .active{
           background: #7CBA72;
@@ -88,6 +93,36 @@
       //color: rgba(19, 2, 2, 0.85);
       height: 27px;
       top: 10px;
+    }
+    &--burger{
+      display: none;
+    }
+  }
+}
+@media (max-width: 1248px) {
+  #header{
+    .header{
+      &--burger{
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+      }
+
+      &-nav{
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        right: 0;
+        top: 0;
+        background: #40AB7E;
+        padding: 10% 6%;
+        margin: 8.7% 0;
+        transform: translateX(100%);
+      }
+      .header-car{
+        margin: 15px 0;
+      }
     }
   }
 }
@@ -226,3 +261,4 @@
 .actor-movies{
   padding: 5% 0;
 }
+

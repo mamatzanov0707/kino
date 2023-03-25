@@ -9,11 +9,19 @@ import Playing from "./components/playing";
 import DetailPage from "./components/page/DetailPage";
 import DetailActors from "./components/DetailActors";
 import SearchResult from "./components/page/SearchResult/SearchResult";
+import {useState} from "react";
 
 function App() {
+    const [dark , setDark] = useState(false)
+    const getDark = () =>{
+        setDark(!dark)
+    }
   return (
-      <div>
-        <Header/>
+      <div style={{
+          background:dark ? '#232121' : 'white',
+          color: dark ? 'white' : 'black'
+      }}>
+        <Header getDark={getDark} dark={dark}/>
           {/*<Home/>*/}
           <Routes>
               <Route path={'/'} element={ <Home/> }/>
@@ -23,7 +31,6 @@ function App() {
               <Route path={'/movies/detail-page/:movieId'} element={ <DetailPage /> }/>
               <Route path={'/movies/actors-cast/:castId'} element={ <DetailActors /> }/>
               <Route path={'/movies/search-result/:movieName'} element={ <SearchResult /> }/>
-
           </Routes>
       </div>
   );

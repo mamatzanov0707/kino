@@ -41,7 +41,7 @@ const DetailPage = () => {
                                     <VscHeart className='detail--icons'/>
                                     <VscBookmark className='detail--icons'/>
                                     <GoStar className='detail--icons'/>
-                                    <VscTriangleRight className='detail--icons'/>
+                                    <a href="https://youtu.be/qnHwpQJluL4"><VscTriangleRight className='detail--icons'/></a>
                                 </div>
                             </div>
                             <p>{detail.overview}</p>
