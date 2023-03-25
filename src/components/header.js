@@ -44,8 +44,6 @@ const Header = ({getDark}) => {
                         <NavLink className='header-car' to={'/Top-Rated'}>Top Rated</NavLink>
                     </div>
                   <div className='header-buttons'>
-                      {/*<input type="search" placeholder="search...." style={{display: counter ? "" : "none"}}/>*/}
-                      {/*<AiOutlineSearch className="header--too" onClick={() => setCounter(!counter)} style={{color:'white'}}/>*/}
                       <input ref={inputRef} onChange={(event)=>setValue(event.target.value)}
                              onKeyDown={enterClick} type="text" placeholder='kino'/>
                       <button
@@ -60,7 +58,7 @@ const Header = ({getDark}) => {
                         <option value="fr-FR" selected={language === 'fr-FR'}>france</option>
                     </select>
                     <CgDarkMode className='header-icons' onClick={getDark} style={{color:'white',width:'28px',height:'28px',cursor:'pointer'}}/>
-                    <div className='header--burger' onClick={() => setOpen(!isOpen)}>
+                    <div className='header--burger'>
                         <Hamburger  color='rgb(252, 6 , 108)' toggle={isOpen} size='32'/>
                     </div>
                 </div>
